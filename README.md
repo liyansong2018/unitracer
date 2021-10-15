@@ -1,4 +1,4 @@
-A great data flow tracking plug-in from Unicorn engine
+**Unitracer**
 
 ![demo](pictures/demo.gif)
 
@@ -34,7 +34,7 @@ output: call stack
 
 output: set color (basic block)
 
-4..Use the shortcut `Ctrl + H` to clear the color setting of the basic block
+4.Use the shortcut `Ctrl + H` to clear the color setting of the basic block
 
 
 
