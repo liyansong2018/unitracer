@@ -2,7 +2,7 @@
 
 ![demo](pictures/demo.gif)
 
-## Basic Usage
+## Usage
 
 1.Hook basic block in unicorn script
 
