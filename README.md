@@ -6,12 +6,23 @@
 
 1.Hook basic block in unicorn script
 
+Python
+
 ```python
-def unicorn_debug_block(uc, address, size, user_data):
+def uc_debug_block(uc, address, size, user_data):
     # Our tool uses "addr =" to track the data flow
     print("Basic Block: addr=0x{0:016x}, size=0x{1:016x}".format(address, size))
     
-uc.hook_add(UC_HOOK_BLOCK, unicorn_debug_block)
+uc.hook_add(UC_HOOK_BLOCK, uc_debug_block)
+```
+
+C
+```c
+void uc_debug_block(uc_engine *uc, int addr, int size, void *user_data) {
+    print("Basic Block: addr=0x%x, size=0x%x", addr, size);
+}
+
+hook_add(uc, &hook2, UC_HOOK_BLOCK, uc_debug_block, NULL, 1, 0);
 ```
 
 2.Export instruction simulation record
